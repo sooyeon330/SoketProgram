@@ -28,35 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnServer = new System.Windows.Forms.Button();
+            this.btnClient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnServer
             // 
-            this.button1.Location = new System.Drawing.Point(65, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 83);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "채팅방 만들기";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnServer.Location = new System.Drawing.Point(65, 103);
+            this.btnServer.Name = "btnServer";
+            this.btnServer.Size = new System.Drawing.Size(174, 83);
+            this.btnServer.TabIndex = 0;
+            this.btnServer.Text = "채팅방 만들기";
+            this.btnServer.UseVisualStyleBackColor = true;
+            this.btnServer.Click += new System.EventHandler(this.BtnServer_Click);
             // 
-            // button2
+            // btnClient
             // 
-            this.button2.Location = new System.Drawing.Point(65, 249);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 83);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "채팅방 들어가기";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnClient.Location = new System.Drawing.Point(65, 249);
+            this.btnClient.Name = "btnClient";
+            this.btnClient.Size = new System.Drawing.Size(174, 83);
+            this.btnClient.TabIndex = 0;
+            this.btnClient.Text = "채팅방 들어가기";
+            this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.Click += new System.EventHandler(this.BtnClient_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(311, 429);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClient);
+            this.Controls.Add(this.btnServer);
             this.Name = "Form1";
             this.Text = "채팅 프로그램 3616 채수연";
             this.ResumeLayout(false);
@@ -65,8 +67,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnServer;
+        private System.Windows.Forms.Button btnClient;
     }
 }
 

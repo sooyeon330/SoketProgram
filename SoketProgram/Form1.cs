@@ -16,5 +16,28 @@ namespace SoketProgram
         {
             InitializeComponent();
         }
+
+        private void BtnServer_Click(object sender, EventArgs e)
+        {
+            ShowServerChat();
+        }
+
+        private void BtnClient_Click(object sender, EventArgs e)
+        {
+            ShowClientChat();
+        }
+
+        private static void ShowClientChat()
+        {
+            ClientChat cf = new ClientChat();
+            cf.Show();
+        }
+
+        private static void ShowServerChat()
+        {
+            ServerChat sf = new ServerChat();
+            sf.Show();
+        }
+
     }
 }
