@@ -61,6 +61,7 @@
             // 
             this.tbxIpS.Location = new System.Drawing.Point(47, 10);
             this.tbxIpS.Name = "tbxIpS";
+            this.tbxIpS.ReadOnly = true;
             this.tbxIpS.Size = new System.Drawing.Size(124, 21);
             this.tbxIpS.TabIndex = 2;
             // 
