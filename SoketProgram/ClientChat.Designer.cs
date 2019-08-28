@@ -1,6 +1,6 @@
 ﻿namespace SoketProgram
 {
-    partial class ClientChat
+    partial class ClientForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,122 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lbIpC = new System.Windows.Forms.Label();
+            this.lbPortC = new System.Windows.Forms.Label();
+            this.tbxIpC = new System.Windows.Forms.TextBox();
+            this.tbxPortC = new System.Windows.Forms.TextBox();
+            this.btnEnter = new System.Windows.Forms.Button();
+            this.btnExitC = new System.Windows.Forms.Button();
+            this.tbxChatHsC = new System.Windows.Forms.TextBox();
+            this.tbxChatInputC = new System.Windows.Forms.TextBox();
+            this.btnSendC = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // lbIpC
+            // 
+            this.lbIpC.AutoSize = true;
+            this.lbIpC.Location = new System.Drawing.Point(15, 25);
+            this.lbIpC.Name = "lbIpC";
+            this.lbIpC.Size = new System.Drawing.Size(28, 12);
+            this.lbIpC.TabIndex = 0;
+            this.lbIpC.Text = "IP : ";
+            // 
+            // lbPortC
+            // 
+            this.lbPortC.AutoSize = true;
+            this.lbPortC.Location = new System.Drawing.Point(12, 52);
+            this.lbPortC.Name = "lbPortC";
+            this.lbPortC.Size = new System.Drawing.Size(50, 12);
+            this.lbPortC.TabIndex = 1;
+            this.lbPortC.Text = "PORT : ";
+            // 
+            // tbxIpC
+            // 
+            this.tbxIpC.Location = new System.Drawing.Point(47, 16);
+            this.tbxIpC.Name = "tbxIpC";
+            this.tbxIpC.Size = new System.Drawing.Size(124, 21);
+            this.tbxIpC.TabIndex = 2;
+            // 
+            // tbxPortC
+            // 
+            this.tbxPortC.Location = new System.Drawing.Point(68, 49);
+            this.tbxPortC.Name = "tbxPortC";
+            this.tbxPortC.Size = new System.Drawing.Size(103, 21);
+            this.tbxPortC.TabIndex = 2;
+            // 
+            // btnEnter
+            // 
+            this.btnEnter.Location = new System.Drawing.Point(197, 10);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(70, 54);
+            this.btnEnter.TabIndex = 3;
+            this.btnEnter.Text = "접속하기";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            // 
+            // btnExitC
+            // 
+            this.btnExitC.Location = new System.Drawing.Point(273, 10);
+            this.btnExitC.Name = "btnExitC";
+            this.btnExitC.Size = new System.Drawing.Size(70, 54);
+            this.btnExitC.TabIndex = 3;
+            this.btnExitC.Text = "나가기";
+            this.btnExitC.UseVisualStyleBackColor = true;
+            // 
+            // tbxChatHsC
+            // 
+            this.tbxChatHsC.Location = new System.Drawing.Point(14, 87);
+            this.tbxChatHsC.Multiline = true;
+            this.tbxChatHsC.Name = "tbxChatHsC";
+            this.tbxChatHsC.Size = new System.Drawing.Size(332, 311);
+            this.tbxChatHsC.TabIndex = 4;
+            // 
+            // tbxChatInputC
+            // 
+            this.tbxChatInputC.Location = new System.Drawing.Point(11, 418);
+            this.tbxChatInputC.Name = "tbxChatInputC";
+            this.tbxChatInputC.Size = new System.Drawing.Size(256, 21);
+            this.tbxChatInputC.TabIndex = 5;
+            // 
+            // btnSendC
+            // 
+            this.btnSendC.Location = new System.Drawing.Point(274, 418);
+            this.btnSendC.Name = "btnSendC";
+            this.btnSendC.Size = new System.Drawing.Size(75, 23);
+            this.btnSendC.TabIndex = 6;
+            this.btnSendC.Text = "보내기";
+            this.btnSendC.UseVisualStyleBackColor = true;
+            // 
+            // ClientForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(358, 465);
+            this.Controls.Add(this.btnSendC);
+            this.Controls.Add(this.tbxPortC);
+            this.Controls.Add(this.tbxChatInputC);
+            this.Controls.Add(this.lbIpC);
+            this.Controls.Add(this.tbxChatHsC);
+            this.Controls.Add(this.lbPortC);
+            this.Controls.Add(this.btnExitC);
+            this.Controls.Add(this.tbxIpC);
+            this.Controls.Add(this.btnEnter);
+            this.Name = "ClientForm";
             this.Text = "ClientChat";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lbIpC;
+        private System.Windows.Forms.Label lbPortC;
+        private System.Windows.Forms.TextBox tbxIpC;
+        private System.Windows.Forms.TextBox tbxPortC;
+        private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.Button btnExitC;
+        private System.Windows.Forms.TextBox tbxChatHsC;
+        private System.Windows.Forms.TextBox tbxChatInputC;
+        private System.Windows.Forms.Button btnSendC;
     }
 }

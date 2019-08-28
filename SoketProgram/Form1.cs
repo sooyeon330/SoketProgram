@@ -29,13 +29,13 @@ namespace SoketProgram
 
         private static void ShowClientChat()
         {
-            ClientChat cf = new ClientChat();
+            ClientForm cf = new ClientForm();
             cf.Show();
         }
 
         private static void ShowServerChat()
         {
-            ServerChat sf = new ServerChat();
+            ServerForm sf = new ServerForm();
             sf.Show();
         }
 

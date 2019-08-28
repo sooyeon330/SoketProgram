@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SoketProgram
 {
-    public partial class ClientChat : Form
+    public partial class ClientForm : Form
     {
-        public ClientChat()
+        public ClientForm()
         {
             InitializeComponent();
         }
