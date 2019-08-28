@@ -162,7 +162,6 @@ namespace SoketProgram
         private void BtnStart_Click(object sender, EventArgs e)
         {
             port = Int32.Parse( tbxPortS.Text);
-
             // 쓰레드 생성
             Thread t = new Thread(InitSocket);
             t.IsBackground = true;

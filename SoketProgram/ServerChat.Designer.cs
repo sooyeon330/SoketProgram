@@ -33,10 +33,10 @@
             this.tbxIpS = new System.Windows.Forms.TextBox();
             this.tbxPortS = new System.Windows.Forms.TextBox();
             this.tbxChatHsS = new System.Windows.Forms.TextBox();
-            this.tbxChatInputS = new System.Windows.Forms.TextBox();
-            this.btnSendS = new System.Windows.Forms.Button();
             this.btnEnd = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
+            this.btnSendS = new System.Windows.Forms.Button();
+            this.tbxChatInputS = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lb_ip
@@ -80,22 +80,6 @@
             this.tbxChatHsS.Size = new System.Drawing.Size(332, 311);
             this.tbxChatHsS.TabIndex = 4;
             // 
-            // tbxChatInputS
-            // 
-            this.tbxChatInputS.Location = new System.Drawing.Point(13, 419);
-            this.tbxChatInputS.Name = "tbxChatInputS";
-            this.tbxChatInputS.Size = new System.Drawing.Size(256, 21);
-            this.tbxChatInputS.TabIndex = 5;
-            // 
-            // btnSendS
-            // 
-            this.btnSendS.Location = new System.Drawing.Point(276, 419);
-            this.btnSendS.Name = "btnSendS";
-            this.btnSendS.Size = new System.Drawing.Size(75, 23);
-            this.btnSendS.TabIndex = 6;
-            this.btnSendS.Text = "보내기";
-            this.btnSendS.UseVisualStyleBackColor = true;
-            // 
             // btnEnd
             // 
             this.btnEnd.Location = new System.Drawing.Point(275, 10);
@@ -115,6 +99,22 @@
             this.btnStart.Text = "시작하기";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
+            // 
+            // btnSendS
+            // 
+            this.btnSendS.Location = new System.Drawing.Point(276, 419);
+            this.btnSendS.Name = "btnSendS";
+            this.btnSendS.Size = new System.Drawing.Size(75, 23);
+            this.btnSendS.TabIndex = 6;
+            this.btnSendS.Text = "보내기";
+            this.btnSendS.UseVisualStyleBackColor = true;
+            // 
+            // tbxChatInputS
+            // 
+            this.tbxChatInputS.Location = new System.Drawing.Point(13, 419);
+            this.tbxChatInputS.Name = "tbxChatInputS";
+            this.tbxChatInputS.Size = new System.Drawing.Size(256, 21);
+            this.tbxChatInputS.TabIndex = 5;
             // 
             // ServerForm
             // 
@@ -145,9 +145,9 @@
         private System.Windows.Forms.TextBox tbxIpS;
         private System.Windows.Forms.TextBox tbxPortS;
         private System.Windows.Forms.TextBox tbxChatHsS;
-        private System.Windows.Forms.TextBox tbxChatInputS;
-        private System.Windows.Forms.Button btnSendS;
         private System.Windows.Forms.Button btnEnd;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnSendS;
+        private System.Windows.Forms.TextBox tbxChatInputS;
     }
 }
