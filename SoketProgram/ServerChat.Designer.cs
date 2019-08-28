@@ -104,6 +104,7 @@
             this.btnEnd.TabIndex = 3;
             this.btnEnd.Text = "종료하기";
             this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnEnd.Click += new System.EventHandler(this.BtnEnd_Click);
             // 
             // btnStart
             // 
@@ -113,6 +114,7 @@
             this.btnStart.TabIndex = 3;
             this.btnStart.Text = "시작하기";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // ServerForm
             // 
@@ -130,6 +132,7 @@
             this.Controls.Add(this.lb_ip);
             this.Name = "ServerForm";
             this.Text = "ServerChat";
+            this.Load += new System.EventHandler(this.ServerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
