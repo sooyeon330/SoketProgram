@@ -100,6 +100,7 @@
             this.tbxChatHsC.Location = new System.Drawing.Point(14, 125);
             this.tbxChatHsC.Multiline = true;
             this.tbxChatHsC.Name = "tbxChatHsC";
+            this.tbxChatHsC.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxChatHsC.Size = new System.Drawing.Size(332, 299);
             this.tbxChatHsC.TabIndex = 4;
             // 

@@ -32,7 +32,7 @@ namespace SoketProgram
             server.Start(); // 서버 시작
 
             DisplayText(">> Server Started");
-            DisplayText(IPAddress.Any.ToString());
+            //DisplayText(IPAddress.Any.ToString());
 
             while (true)
             {
@@ -66,8 +66,8 @@ namespace SoketProgram
                 catch (Exception ex) { break; }
 
             }
-
-            clientSocket.Close(); // client 소켓 닫기
+            if(clientSocket != null) clientSocket.Close(); // client 소켓 닫기
+            DisplayText(">>Server End");
             server.Stop(); // 서버 종료
 
         }
@@ -172,12 +172,14 @@ namespace SoketProgram
             t.IsBackground = true;
             t.Start();
 
-        }
+        }  
 
         private void BtnEnd_Click(object sender, EventArgs e)
         {
-            
+
+            server.Stop();
         }
+
     }
 
 }
