@@ -155,6 +155,7 @@
             this.Controls.Add(this.btnExitC);
             this.Controls.Add(this.tbxIpC);
             this.Controls.Add(this.btnEnter);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ClientForm";
             this.Text = "ClientChat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientForm_FormClosing);

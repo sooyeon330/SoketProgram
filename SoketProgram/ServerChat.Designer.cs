@@ -35,8 +35,6 @@
             this.tbxChatHsS = new System.Windows.Forms.TextBox();
             this.btnEnd = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
-            this.btnSendS = new System.Windows.Forms.Button();
-            this.tbxChatInputS = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lb_ip
@@ -100,29 +98,11 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
-            // btnSendS
-            // 
-            this.btnSendS.Location = new System.Drawing.Point(276, 419);
-            this.btnSendS.Name = "btnSendS";
-            this.btnSendS.Size = new System.Drawing.Size(75, 23);
-            this.btnSendS.TabIndex = 6;
-            this.btnSendS.Text = "보내기";
-            this.btnSendS.UseVisualStyleBackColor = true;
-            // 
-            // tbxChatInputS
-            // 
-            this.tbxChatInputS.Location = new System.Drawing.Point(13, 419);
-            this.tbxChatInputS.Name = "tbxChatInputS";
-            this.tbxChatInputS.Size = new System.Drawing.Size(256, 21);
-            this.tbxChatInputS.TabIndex = 5;
-            // 
             // ServerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 461);
-            this.Controls.Add(this.btnSendS);
-            this.Controls.Add(this.tbxChatInputS);
+            this.ClientSize = new System.Drawing.Size(361, 418);
             this.Controls.Add(this.tbxChatHsS);
             this.Controls.Add(this.btnEnd);
             this.Controls.Add(this.btnStart);
@@ -130,6 +110,7 @@
             this.Controls.Add(this.tbxIpS);
             this.Controls.Add(this.lb_port);
             this.Controls.Add(this.lb_ip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ServerForm";
             this.Text = "ServerChat";
             this.Load += new System.EventHandler(this.ServerForm_Load);
@@ -147,7 +128,5 @@
         private System.Windows.Forms.TextBox tbxChatHsS;
         private System.Windows.Forms.Button btnEnd;
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Button btnSendS;
-        private System.Windows.Forms.TextBox tbxChatInputS;
     }
 }
