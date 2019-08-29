@@ -93,6 +93,7 @@
             this.btnExitC.TabIndex = 3;
             this.btnExitC.Text = "나가기";
             this.btnExitC.UseVisualStyleBackColor = true;
+            this.btnExitC.Click += new System.EventHandler(this.BtnExitC_Click);
             // 
             // tbxChatHsC
             // 

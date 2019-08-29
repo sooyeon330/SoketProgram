@@ -15,7 +15,7 @@ namespace SoketProgram
         TcpListener server = null; // 서버
         TcpClient clientSocket = null; // 소켓
         static int counter = 0; // 사용자 수
-        string date; // 날짜 
+       // string date; // 날짜 
         // 각 클라이언트 마다 리스트에 추가
         public  Dictionary<TcpClient, string> clientList = new Dictionary<TcpClient, string>();
         int port;
@@ -40,15 +40,17 @@ namespace SoketProgram
                 try
                 {
                     counter++; // Client 수 증가
-                    clientSocket = server.AcceptTcpClient(); // client 소켓 접속 허용
-                    DisplayText(">> Accept connection from client");
+                    clientSocket = server.AcceptTcpClient(); // client 소켓 접속 허용       
+                    
 
                     NetworkStream stream = clientSocket.GetStream();
                     byte[] buffer = new byte[1024]; // 버퍼
                     int bytes = stream.Read(buffer, 0, buffer.Length);
+
                     string user_name = Encoding.Unicode.GetString(buffer, 0, bytes);
                     user_name = user_name.Substring(0, user_name.IndexOf("$")); // client 사용자 명
 
+                    DisplayText(">> " +user_name+"님이 접속하였습니다");
                     clientList.Add(clientSocket, user_name); // cleint 리스트에 추가
 
                     SendMessageAll(user_name + " 님이 입장하셨습니다.", "", false); // 모든 client에게 메세지 전송
@@ -79,11 +81,11 @@ namespace SoketProgram
         
         private void OnReceived(string message, string user_name) // cleint로 부터 받은 데이터
         {
-            if (message.Equals("leaveChat"))
+            if (message.Equals("exit"))
             {
-                string displayMessage = "leave user : " + user_name;
+                string displayMessage = "exit user : " + user_name;
                 DisplayText(displayMessage);
-                SendMessageAll("leaveChat", user_name, true);
+                SendMessageAll("exit", user_name, true);
             }
             else
             {
@@ -96,22 +98,17 @@ namespace SoketProgram
                
         public void SendMessageAll(string message, string user_name, bool flag)
         {
-            foreach (var pair in clientList)
+            foreach (var pair in clientList) //접속한 클라이언트 받아오기
             {
-                date = DateTime.Now.ToString("yyyy.MM.dd. HH:mm:ss"); // 현재 날짜 받기
-                
-                TcpClient client = pair.Key as TcpClient;
+                              
+                TcpClient client = pair.Key as TcpClient; 
                 NetworkStream stream = client.GetStream();
                 byte[] buffer = null;
 
                 if (flag)
                 {
-                    if (message.Equals("leaveChat"))
-                        buffer = Encoding.Unicode.GetBytes(user_name + " 님이 대화방을 나갔습니다.");
-                    else
-                        buffer = Encoding.Unicode.GetBytes("[ " + date + " ] " + user_name + " : " + message);
-
-                }
+                        buffer = Encoding.Unicode.GetBytes(user_name + " : " + message);
+                                    }
                 else
                 {
                     buffer = Encoding.Unicode.GetBytes(message);
@@ -161,7 +158,15 @@ namespace SoketProgram
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(tbxPortS.Text, out port))
+            {
+                MsgBoxHelper.Error("포트 번호가 잘못 입력되었거나 입력되지 않았습니다.");
+                tbxPortS.Focus();
+                tbxPortS.SelectAll();
+                return;
+            }
             port = Int32.Parse( tbxPortS.Text);
+            
             // 쓰레드 생성
             Thread t = new Thread(InitSocket);
             t.IsBackground = true;
@@ -171,8 +176,7 @@ namespace SoketProgram
 
         private void BtnEnd_Click(object sender, EventArgs e)
         {
-            clientSocket.Close();//클라이언트 소켓 닫기
-            server.Stop(); // 서버 종료
+            
         }
     }
 
