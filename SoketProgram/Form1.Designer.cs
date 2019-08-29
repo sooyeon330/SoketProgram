@@ -56,9 +56,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(311, 429);
             this.Controls.Add(this.btnClient);
             this.Controls.Add(this.btnServer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "채팅 프로그램 3616 채수연";
             this.ResumeLayout(false);
